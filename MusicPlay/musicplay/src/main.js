@@ -3,11 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import axios from 'axios'
+import api from './api/index'
 import store from './vuex/store'
+//引入ui组件
+import Cube from 'cube-ui'
+Vue.use(Cube)
 
 Vue.config.productionTip = false
-Vue.prototype.axios = axios
+Vue.prototype.$api = api
 
 /* eslint-disable no-new */
 new Vue({

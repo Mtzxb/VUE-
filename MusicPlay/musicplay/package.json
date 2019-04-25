@@ -10,11 +10,22 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "cube-ui": "^1.12.16",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vuex": "^3.1.0"
   },
+  "transformModules": {
+	    "cube-ui": {
+	      "transform": "cube-ui/lib/${member}",
+	      "kebabCase": true,
+	      "style": {
+	        "ignore": ["create-api", "better-scroll", "locale"]
+	      }
+	    }
+  	},
   "devDependencies": {
+  	"webpack-transform-modules-plugin": "^0.4.3",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",

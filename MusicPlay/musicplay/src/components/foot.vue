@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<button @click="$store.commit('add',10)">状态管理改变</button>
+		<cube-button @click="$store.commit('add',10)">底部</cube-button>
 	</div>
 </template>
 

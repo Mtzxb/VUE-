@@ -1,0 +1,23 @@
+//app.vue
+#app{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: auto;
+}
+
+//index.vue
+.indexBg{
+    flex: 1;
+    padding-top:60px;
+    overflow: auto;
+    .songSlist{
+        list-style: none;
+        height: 40px;
+        border-bottom: 0.5px solid #eee;
+        width: 92%;
+        margin: 0 auto;
+        padding-left: 10px;
+        line-height: 40px;
+    }
+}

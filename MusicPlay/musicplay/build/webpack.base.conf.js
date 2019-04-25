@@ -3,6 +3,7 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
+var TransformModulesPlugin = require('webpack-transform-modules-plugin')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -27,8 +28,13 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      'cube-ui': 'cube-ui/lib',//引入ui组件的配置
     }
   },
+	plugins: [
+    // ...
+    new TransformModulesPlugin()
+  ],
   module: {
     rules: [
       {
